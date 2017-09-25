@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QGridLayout>
 #include <QStackedLayout>
+#include "sql.h"
 
 
 class AdminDialog : public QDialog
@@ -12,10 +13,11 @@ class AdminDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit AdminDialog(QWidget *parent = 0);
+    explicit AdminDialog(SMSsqlDatabase* DB,QWidget *parent = 0);
     ~AdminDialog();
 
 private:
+    SMSsqlDatabase* myDB;
     QGridLayout* gridLayout;
     QVBoxLayout* vboxLayout;
     QGroupBox* groupBoxChoice;

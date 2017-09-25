@@ -21,18 +21,12 @@ private:
     QGridLayout* gridLayout;
     QPushButton* btnLogin;
     QPushButton* btnCancel;
-    QRadioButton* RbtnStu;
-    QRadioButton* RbtnTch;
-    QRadioButton* RbtnAdm;
     QLabel* userIDLabel;
     QLabel* userPWLabel;
     QLineEdit* userIDEdit;
     QLineEdit* userPWEdit;
 
-    typedef enum{chUserID,chUserPW}inforCheckType;
-
     bool inputNotEmptyCheck(void);
-    bool infoCheck(inforCheckType type);
 
 
 

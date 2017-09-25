@@ -3,6 +3,7 @@
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
+#include <QString>
 
 class SMSsqlDatabase
 {
@@ -10,6 +11,10 @@ class SMSsqlDatabase
 public:
     explicit SMSsqlDatabase();
     ~SMSsqlDatabase();
+    int checkUserIDAndPassword(const QString &userID, const QString &password);
+    bool addStudentBaseInfo(QStringList &studentBaseInformation);
+
+
 
 private:
     QSqlDatabase DB;
