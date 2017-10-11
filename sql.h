@@ -4,6 +4,7 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QString>
+#include <QStringList>
 
 class SMSsqlDatabase
 {
@@ -12,15 +13,14 @@ public:
     explicit SMSsqlDatabase();
     ~SMSsqlDatabase();
     int checkUserIDAndPassword(const QString &userID, const QString &password);
-    bool addStudentBaseInfo(QStringList &studentBaseInformation);
-
+    int addStudentBaseInfo(QStringList &studentBaseInformation);
+    QStringList comboBoxAddItems(QString tableName);
 
 
 private:
     QSqlDatabase DB;
     QSqlQuery* qSqlQuery;
-
-
+    QStringList tableItemStringlist;
 
 };
 

@@ -52,14 +52,14 @@ LoginDialog::LoginDialog(QWidget *parent) :
 LoginDialog::~LoginDialog()
 {
     delete myDB;
-    delete gridLayout;
     delete btnLogin;
     delete btnCancel;
     delete userIDLabel;
     delete userPWLabel;
     delete userIDEdit;
     delete userPWEdit;
-    qDebug("~logindialog\n");
+    delete gridLayout;
+    qDebug("destruct logindialog\n");
 }
 void LoginDialog::on_btnLogin_clicked()
 {

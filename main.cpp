@@ -10,10 +10,5 @@ int main(int argc, char *argv[])
     LoginDialog w;
     w.show();
 
-
-
-
-
-
     return a.exec();
 }

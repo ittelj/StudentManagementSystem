@@ -1,5 +1,5 @@
-#ifndef BTNADDINFO_H
-#define BTNADDINFO_H
+#ifndef ADDSTUDENTINFO_H
+#define ADDSTUDENTINFO_H
 #include <QWidget>
 #include <QFormLayout>
 #include <QPushButton>
@@ -7,15 +7,16 @@
 #include <QLineEdit>
 #include <QComboBox>
 #include <QDateEdit>
+#include <QFile>
 #include "sql.h"
 
-class AddInfoWidget : public QWidget
+class addStudentInfo : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit AddInfoWidget(SMSsqlDatabase* DB,QWidget *parent = 0);
-    ~AddInfoWidget();
+    explicit addStudentInfo(SMSsqlDatabase* DB,QWidget *parent = 0);
+    ~addStudentInfo();
 
 private:
     SMSsqlDatabase* myDB;
@@ -31,21 +32,16 @@ private:
     QComboBox* comboBoxClass;
     QPushButton* btnRegister;
     QPushButton* btnReset;
+    QPushButton* btnImport;
     QHBoxLayout* btnLayout;
 
 private slots:
     void on_btnRegister_clicked();
     void on_btnReset_clicked();
-
-
-
-
-
+    void on_btnImport_clicked();
 
 };
 
 
-
-
-#endif // BTNADDINFO_H
+#endif // ADDSTUDENTINFO_H
 

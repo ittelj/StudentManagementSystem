@@ -16,15 +16,15 @@ SOURCES += main.cpp \
     AdminDialog.cpp \
     LoginDialog.cpp \
     sql.cpp \
-    AddInfoWidget.cpp \
-    deleInfoWidget.cpp
+    addStudentInfo.cpp \
+    manageStudentInfo.cpp
 
 HEADERS  += \
     LoginDialog.h \
     AdminDialog.h \
     sql.h \
-    AddInfoWidget.h \
-    deleInfoWidget.h
+    addStudentInfo.h \
+    manageStudentInfo.h
 
 FORMS    +=
 
